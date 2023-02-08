@@ -1,4 +1,4 @@
-module github.com/bigbagboom/sswsgo
+module github.com/bbbhere/sswsgo
 
 go 1.19
 
