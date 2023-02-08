@@ -713,7 +713,8 @@ func myclient(proxystr string, hostname string, port string, urlstr string, spor
 
 func main() {
 
-	osenvkey := os.Getenv("SSWSGOPASS")
+	//osenvkey := os.Getenv("SSWSGOPASS")
+	osenvkey := ""
 
 	s := flag.Bool("s", false, "Server")
 	c := flag.Bool("c", false, "Client")
@@ -721,7 +722,7 @@ func main() {
 	proxy := flag.String("proxy", "", "local http proxy")
 	hostname := flag.String("hostname", "0.0.0.0", "hostname")
 	port := flag.String("port", "7071", "port")
-	sport := flag.String("sport", "80", "sport")
+	sport := flag.String("sport", "443", "sport")
 	urlstr := flag.String("urlstr", "", "sswsgo server url")
 	key := flag.String("key", "", "16 bit or 32 bit passcode")
 
@@ -755,7 +756,8 @@ func main() {
 		return
 	}
 
-	herokuport := os.Getenv("PORT") //only for heroku
+	//herokuport := os.Getenv("PORT") //only for heroku
+	herokuport := "81"  //just for replit, client should use 443 instead.
 
 	if *s {
 		//myserver(*sport)
